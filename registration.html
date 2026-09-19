@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Pendaftaran Panitia — G-Fest 2027 · Garuda Festival Education</title>
+<meta name="description" content="Form pendaftaran panitia G-Fest 2027 — Garuda Festival Education, SMA Negeri 1 Batang." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#F7F5F0; --paper:#FFFFFF; --ink:#0D0E12; --ink-2:#5A5E6B;
+  --line:rgba(13,14,18,.09); --line-2:rgba(13,14,18,.16);
+  --blue:#16307E; --blue-2:#2447B8; --blue-3:#5B7BE8; --blue-soft:#E9EDFA;
+  --amber:#C57A1E; --amber-soft:#FBF0DC; --coral:#E85A4F; --green:#2E8B57;
+  --radius:20px; --radius-lg:28px;
+  --font-d:'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-b:'Inter', ui-sans-serif, system-ui, sans-serif;
+  --ease:cubic-bezier(.2,.7,.3,1);
+}
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--font-b);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+img,svg{max-width:100%;display:block;}
+button{font-family:inherit;}
+a{color:inherit;}
+::selection{background:var(--blue);color:#fff;}
+::-webkit-scrollbar{width:10px;height:10px;}
+::-webkit-scrollbar-track{background:var(--cream);}
+::-webkit-scrollbar-thumb{background:rgba(13,14,18,.18);border-radius:99px;border:3px solid var(--cream);}
+
+.container{width:min(1100px,100% - 48px);margin-inline:auto;}
+@media(max-width:640px){.container{width:min(1100px,100% - 36px);}}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:600;font-size:14px;line-height:1;padding:14px 24px;border-radius:999px;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .3s var(--ease),background .25s,color .25s,border-color .25s,box-shadow .3s;white-space:nowrap;}
+.btn--sm{padding:11px 18px;font-size:13px;}
+.btn--lg{padding:17px 30px;font-size:15px;}
+.btn--primary{background:var(--blue);color:#fff;box-shadow:0 8px 22px -12px rgba(22,48,126,.7);}
+.btn--primary:hover{background:var(--blue-2);transform:translateY(-2px);box-shadow:0 16px 32px -14px rgba(22,48,126,.85);}
+.btn--ghost{border-color:var(--line-2);color:var(--ink);background:transparent;}
+.btn--ghost:hover{background:var(--ink);color:var(--cream);border-color:var(--ink);transform:translateY(-2px);}
+.btn:disabled{opacity:.5;cursor:not-allowed;transform:none!important;}
+
+.page-head{
+  padding:32px 0;
+  border-bottom:1px solid var(--line);
+  background:rgba(255,255,255,.6);
+  backdrop-filter:blur(10px);
+  position:sticky;top:0;z-index:50;
+}
+.page-head__inner{display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.page-head__brand{font-family:var(--font-d);font-weight:700;font-size:22px;letter-spacing:-.05em;text-decoration:none;display:inline-flex;align-items:center;gap:2px;}
+.page-head__brand span{color:var(--blue);position:relative;display:inline-block;}
+.page-head__brand span::after{content:'';position:absolute;left:0;right:0;bottom:2px;height:6px;background:var(--blue);opacity:.16;border-radius:2px;z-index:-1;}
+.page-head__back{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;border:1px solid var(--line-2);background:transparent;font-size:13px;font-weight:600;color:var(--ink-2);text-decoration:none;transition:background .25s,color .25s,border-color .25s,transform .3s var(--ease);}
+.page-head__back:hover{background:var(--ink);color:var(--cream);border-color:var(--ink);transform:translateX(-3px);}
+@media(max-width:520px){.page-head__brand{font-size:18px;}.page-head__back{padding:9px 14px;font-size:12px;}}
+
+.page-hero{padding:64px 0 40px;}
+.page-hero__kicker{display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border-radius:999px;background:var(--blue-soft);border:1px solid rgba(22,48,126,.18);font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);margin-bottom:22px;}
+.page-hero__kicker .dot{width:7px;height:7px;border-radius:50%;background:var(--blue);animation:pulse2 2s infinite;}
+@keyframes pulse2{0%,100%{box-shadow:0 0 0 4px rgba(22,48,126,.2);}50%{box-shadow:0 0 0 9px rgba(22,48,126,.05);}}
+.page-hero h1{font-family:var(--font-d);font-weight:700;font-size:clamp(36px,6vw,72px);line-height:.98;letter-spacing:-.05em;margin:0 0 20px;}
+.page-hero h1 em{font-style:normal;color:var(--blue);position:relative;}
+.page-hero h1 em::after{content:'';position:absolute;left:0;right:0;bottom:8px;height:14px;background:var(--amber-soft);z-index:-1;border-radius:3px;}
+.page-hero p{font-size:clamp(15.5px,1.8vw,18px);line-height:1.7;color:var(--ink-2);max-width:720px;margin:0 0 26px;}
+.page-hero__meta{display:flex;flex-wrap:wrap;gap:12px 28px;padding-top:24px;border-top:1px solid var(--line);}
+.page-hero__meta-item{display:flex;flex-direction:column;gap:3px;}
+.page-hero__meta-item span{font-size:10.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-2);}
+.page-hero__meta-item b{font-family:var(--font-d);font-weight:700;font-size:15px;letter-spacing:-.02em;color:var(--ink);}
+
+.reg-wrap{position:relative;overflow:hidden;border-radius:var(--radius-lg);background:var(--paper);border:1px solid var(--line);padding:clamp(28px,4.5vw,64px);box-shadow:0 40px 80px -50px rgba(22,48,126,.35);margin-bottom:80px;}
+.reg-wrap::before{content:'';position:absolute;top:0;left:0;right:0;height:6px;background:linear-gradient(90deg,var(--blue),var(--blue-3),var(--coral),var(--amber));}
+.reg-form{display:grid;gap:36px;}
+.reg-section{padding:26px;border-radius:var(--radius);background:rgba(13,14,18,.02);border:1px solid var(--line);}
+.reg-section__head{display:flex;align-items:center;gap:14px;margin-bottom:24px;padding-bottom:18px;border-bottom:1px solid var(--line);}
+.reg-section__num{width:36px;height:36px;border-radius:11px;flex-shrink:0;display:grid;place-items:center;background:linear-gradient(135deg,var(--blue),var(--blue-2));color:#fff;font-family:var(--font-d);font-weight:700;font-size:13px;letter-spacing:-.02em;}
+.reg-section__head h3{font-family:var(--font-d);font-weight:700;font-size:17px;letter-spacing:-.025em;margin:0;line-height:1.3;}
+.reg-section__head p{font-size:12.5px;color:var(--ink-2);margin:4px 0 0;line-height:1.5;}
+.reg-section__head > div:last-child{flex:1;min-width:0;}
+
+.reg-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+@media(max-width:760px){.reg-grid{grid-template-columns:1fr;}}
+
+.field-row{display:flex;flex-direction:column;gap:8px;}
+.field-row--full{grid-column:1/-1;}
+.field-row label{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-2);display:flex;align-items:center;gap:7px;}
+.field-row label .req{color:var(--coral);font-size:14px;line-height:0;}
+.field-row label .opt{font-size:9.5px;font-weight:600;letter-spacing:.1em;padding:2px 7px;border-radius:999px;background:rgba(13,14,18,.06);color:var(--ink-2);text-transform:uppercase;}
+.field-row input[type="text"],
+.field-row input[type="email"],
+.field-row input[type="tel"],
+.field-row input[type="url"],
+.field-row select,
+.field-row textarea{
+  width:100%;padding:14px 18px;border-radius:14px;border:1px solid var(--line-2);background:var(--paper);
+  font-family:var(--font-b);font-size:14.5px;color:var(--ink);outline:none;transition:border-color .25s,box-shadow .25s,background .25s;line-height:1.5;
+}
+.field-row textarea{min-height:110px;resize:vertical;font-family:var(--font-b);}
+.field-row select{appearance:none;-webkit-appearance:none;cursor:pointer;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none'><path d='M6 9l6 6 6-6' stroke='%235A5E6B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>");background-repeat:no-repeat;background-position:right 18px center;padding-right:48px;}
+.field-row input:focus,.field-row select:focus,.field-row textarea:focus{border-color:var(--blue);box-shadow:0 0 0 4px rgba(22,48,126,.1);background:#fff;}
+.field-row input.invalid,.field-row select.invalid,.field-row textarea.invalid{border-color:var(--coral);box-shadow:0 0 0 4px rgba(232,90,79,.1);}
+.field-hint{font-size:12px;color:var(--ink-2);line-height:1.55;margin:0;}
+.char-count{font-size:11.5px;color:var(--ink-2);align-self:flex-end;font-variant-numeric:tabular-nums;}
+.char-count.low{color:var(--coral);}
+.char-count.ok{color:var(--green);}
+
+.radio-group{display:flex;flex-wrap:wrap;gap:8px;}
+.radio-pill{position:relative;display:inline-flex;align-items:center;padding:11px 18px;border-radius:999px;border:1.5px solid var(--line-2);background:var(--paper);cursor:pointer;font-size:13.5px;font-weight:600;color:var(--ink);transition:border-color .25s,background .25s,color .25s,transform .2s var(--ease);}
+.radio-pill:hover{border-color:var(--blue);transform:translateY(-1px);}
+.radio-pill input{position:absolute;opacity:0;pointer-events:none;}
+.radio-pill input:checked + span{color:var(--blue);}
+.radio-pill:has(input:checked){background:var(--blue-soft);border-color:var(--blue);box-shadow:0 0 0 3px rgba(22,48,126,.08);}
+.radio-pill span{display:inline-flex;align-items:center;gap:8px;}
+
+.checkbox-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+@media(max-width:760px){.checkbox-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:440px){.checkbox-grid{grid-template-columns:1fr;}}
+.checkbox-pill{position:relative;display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:12px;border:1.5px solid var(--line-2);background:var(--paper);cursor:pointer;font-size:13.5px;font-weight:500;transition:border-color .25s,background .25s,transform .2s var(--ease);}
+.checkbox-pill:hover{border-color:var(--blue);transform:translateY(-1px);}
+.checkbox-pill input{position:absolute;opacity:0;pointer-events:none;}
+.checkbox-pill__box{width:18px;height:18px;border-radius:5px;flex-shrink:0;border:1.5px solid var(--line-2);background:var(--paper);display:grid;place-items:center;transition:background .2s,border-color .2s;}
+.checkbox-pill__box::after{content:'';width:9px;height:5px;border-left:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(-45deg) translate(1px,-1px);opacity:0;transition:opacity .2s;}
+.checkbox-pill:has(input:checked){background:var(--blue-soft);border-color:var(--blue);}
+.checkbox-pill:has(input:checked) .checkbox-pill__box{background:var(--blue);border-color:var(--blue);}
+.checkbox-pill:has(input:checked) .checkbox-pill__box::after{opacity:1;}
+
+.div-pref{display:grid;gap:18px;}
+.div-pref__block{padding:22px;border-radius:16px;border:1px solid var(--line);background:var(--paper);position:relative;}
+.div-pref__block--opt{background:rgba(13,14,18,.015);}
+.div-pref__badge{position:absolute;top:-10px;left:20px;padding:4px 10px;border-radius:999px;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:var(--blue);color:#fff;}
+.div-pref__block--opt .div-pref__badge{background:var(--ink-2);}
+
+.pdd-portfolio{display:none;padding:20px;border-radius:16px;background:linear-gradient(135deg,rgba(197,122,30,.08),rgba(232,90,79,.05));border:1.5px dashed var(--amber);}
+.pdd-portfolio.show{display:block;}
+.pdd-portfolio__head{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
+.pdd-portfolio__ico{width:36px;height:36px;border-radius:11px;flex-shrink:0;display:grid;place-items:center;background:var(--amber);color:#fff;}
+.pdd-portfolio__head h4{font-family:var(--font-d);font-weight:700;font-size:15px;letter-spacing:-.02em;margin:0 0 3px;}
+.pdd-portfolio__head p{font-size:12.5px;color:var(--ink-2);margin:0;line-height:1.5;}
+
+.commit-box{padding:22px;border-radius:16px;background:linear-gradient(135deg,var(--blue-soft),rgba(233,237,250,.6));border:1px solid rgba(22,48,126,.15);}
+.commit-box__head{display:flex;gap:14px;margin-bottom:16px;}
+.commit-box__ico{width:38px;height:38px;border-radius:11px;flex-shrink:0;display:grid;place-items:center;background:var(--blue);color:#fff;}
+.commit-box__head h4{font-family:var(--font-d);font-weight:700;font-size:14.5px;margin:0 0 4px;letter-spacing:-.02em;}
+.commit-box__head p{font-size:13px;color:var(--ink-2);margin:0;line-height:1.55;}
+.commit-list{margin:0 0 18px;padding:0;list-style:none;display:grid;gap:10px;}
+.commit-list li{display:flex;align-items:flex-start;gap:10px;font-size:13.5px;line-height:1.6;color:var(--ink-2);}
+.commit-list li::before{content:'✓';flex-shrink:0;width:20px;height:20px;border-radius:50%;display:grid;place-items:center;font-size:11px;font-weight:700;background:var(--blue);color:#fff;margin-top:1px;}
+.commit-check{display:flex;align-items:flex-start;gap:12px;padding:14px 16px;border-radius:12px;background:var(--paper);border:1.5px solid var(--line-2);cursor:pointer;transition:border-color .25s,background .25s;position:relative;}
+.commit-check:hover{border-color:var(--blue);}
+.commit-check input{position:absolute;opacity:0;pointer-events:none;}
+.commit-check__box{width:22px;height:22px;border-radius:7px;flex-shrink:0;border:2px solid var(--line-2);background:var(--paper);display:grid;place-items:center;transition:.25s;margin-top:1px;}
+.commit-check__box::after{content:'';width:10px;height:6px;border-left:2.5px solid #fff;border-bottom:2.5px solid #fff;transform:rotate(-45deg) translate(1px,-1px);opacity:0;transition:opacity .2s;}
+.commit-check:has(input:checked){background:var(--blue-soft);border-color:var(--blue);}
+.commit-check:has(input:checked) .commit-check__box{background:var(--blue);border-color:var(--blue);}
+.commit-check:has(input:checked) .commit-check__box::after{opacity:1;}
+.commit-check__txt{font-size:13.5px;line-height:1.6;color:var(--ink);font-weight:500;}
+
+.form-progress{display:flex;gap:8px;margin-bottom:28px;padding:0 4px;}
+.form-progress__step{flex:1;height:4px;border-radius:99px;background:var(--line-2);transition:background .3s;}
+.form-progress__step.done{background:var(--blue);}
+
+.reg-actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;padding-top:8px;}
+.reg-actions__info{font-size:12.5px;color:var(--ink-2);max-width:420px;line-height:1.6;}
+.reg-actions__btns{display:flex;gap:12px;flex-wrap:wrap;}
+
+.modal{position:fixed;inset:0;z-index:200;display:grid;place-items:center;padding:20px;opacity:0;visibility:hidden;transition:opacity .3s ease,visibility .3s;}
+.modal.open{opacity:1;visibility:visible;}
+.modal__backdrop{position:absolute;inset:0;background:rgba(13,14,18,.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);}
+.modal__panel{position:relative;width:min(680px,100%);max-height:88vh;overflow-y:auto;background:var(--cream);border-radius:24px;padding:clamp(28px,4vw,44px);transform:translateY(16px) scale(.98);transition:transform .4s var(--ease);box-shadow:0 40px 90px -40px rgba(0,0,0,.6);}
+.modal.open .modal__panel{transform:none;}
+.modal__close{position:absolute;top:18px;right:18px;width:40px;height:40px;border-radius:999px;border:1px solid var(--line-2);background:transparent;cursor:pointer;display:grid;place-items:center;font-size:16px;color:var(--ink);transition:background .25s,color .25s,transform .25s var(--ease);z-index:2;}
+.modal__close:hover{background:var(--ink);color:var(--cream);transform:rotate(90deg);}
+
+.ty-modal{text-align:center;padding:8px 0;}
+.ty-modal__icon{width:88px;height:88px;border-radius:50%;margin:0 auto 22px;display:grid;place-items:center;background:linear-gradient(135deg,var(--green),#5DB87A);color:#fff;position:relative;box-shadow:0 20px 45px -18px rgba(46,139,87,.6);}
+.ty-modal__icon::before{content:'';position:absolute;inset:-8px;border-radius:50%;border:2px dashed rgba(46,139,87,.3);animation:spin 14s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.ty-modal__icon svg{width:44px;height:44px;}
+.ty-modal h3{font-family:var(--font-d);font-weight:700;font-size:clamp(26px,4vw,36px);letter-spacing:-.04em;margin:0 0 12px;line-height:1.1;}
+.ty-modal__kicker{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--green);padding:6px 14px;border-radius:999px;background:rgba(46,139,87,.12);margin-bottom:16px;}
+.ty-modal p{font-size:15px;line-height:1.7;color:var(--ink-2);margin:0 0 22px;max-width:520px;margin-inline:auto;}
+.ty-modal p strong{color:var(--ink);font-weight:600;}
+.ty-summary{padding:20px;border-radius:16px;background:var(--blue-soft);border:1px dashed rgba(22,48,126,.25);text-align:left;margin-bottom:24px;}
+.ty-summary h4{font-size:10.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);margin:0 0 14px;}
+.ty-summary__row{display:flex;justify-content:space-between;gap:14px;padding:9px 0;font-size:13.5px;border-bottom:1px dashed rgba(22,48,126,.15);}
+.ty-summary__row:last-child{border-bottom:none;padding-bottom:0;}
+.ty-summary__row span{color:var(--ink-2);}
+.ty-summary__row b{color:var(--ink);font-weight:600;text-align:right;}
+.ty-wa{display:flex;align-items:center;gap:14px;padding:18px;border-radius:16px;background:linear-gradient(135deg,#25D366 0%,#128C7E 100%);color:#fff;text-decoration:none;text-align:left;box-shadow:0 20px 45px -20px rgba(37,211,102,.7);transition:transform .3s var(--ease),box-shadow .3s;margin-bottom:14px;}
+.ty-wa:hover{transform:translateY(-3px);box-shadow:0 26px 55px -22px rgba(37,211,102,.85);}
+.ty-wa__ico{width:48px;height:48px;border-radius:14px;flex-shrink:0;display:grid;place-items:center;background:rgba(255,255,255,.18);}
+.ty-wa__body{flex:1;min-width:0;}
+.ty-wa__label{font-size:10.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;opacity:.8;margin:0 0 3px;}
+.ty-wa__title{font-family:var(--font-d);font-weight:700;font-size:16px;letter-spacing:-.02em;margin:0 0 2px;}
+.ty-wa__sub{font-size:12.5px;opacity:.88;margin:0;}
+.ty-wa__arrow{font-size:18px;font-weight:700;}
+.ty-steps{display:grid;gap:12px;text-align:left;padding:20px;border-radius:16px;background:rgba(13,14,18,.03);margin-bottom:22px;}
+.ty-steps h4{font-size:10.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-2);margin:0 0 4px;}
+.ty-step{display:flex;gap:12px;align-items:flex-start;font-size:13.5px;line-height:1.6;color:var(--ink-2);}
+.ty-step__num{flex-shrink:0;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:var(--blue);color:#fff;font-family:var(--font-d);font-weight:700;font-size:11px;margin-top:1px;}
+.ty-step b{color:var(--ink);font-weight:600;}
+.ty-close{display:inline-flex;align-items:center;gap:8px;padding:11px 22px;border-radius:999px;background:transparent;border:1px solid var(--line-2);color:var(--ink-2);font-size:13px;font-weight:600;cursor:pointer;transition:background .25s,color .25s,border-color .25s;}
+.ty-close:hover{background:var(--ink);color:var(--cream);border-color:var(--ink);}
+
+.page-footer{padding:32px 0 40px;text-align:center;font-size:12.5px;color:var(--ink-2);border-top:1px solid var(--line);}
+.page-footer b{color:var(--ink);font-family:var(--font-d);font-weight:600;}
+</style>
+</head>
+<body>
+
+<header class="page-head">
+  <div class="container page-head__inner">
+    <a href="index.html" class="page-head__brand">G-FEST<span>27</span></a>
+    <a href="index.html" class="page-head__back">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M11 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Kembali
+    </a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="page-hero__kicker"><span class="dot"></span>Open Recruitment · Panitia G-Fest 2027</span>
+    <h1>Join <em>The Team</em>.</h1>
+    <p>
+      Adik-adik kelas 10 & 11, ini kesempatan kalian jadi bagian dari G-Fest 2027!
+      Isi form di bawah dengan jujur dan lengkap ya. Pilih maksimal <b>2 divisi</b>
+      yang paling kamu minati, dan jelaskan alasanmu.
+    </p>
+    <div class="page-hero__meta">
+      <div class="page-hero__meta-item"><span>Divisi</span><b>6 Pilihan</b></div>
+      <div class="page-hero__meta-item"><span>Status</span><b>Open Now</b></div>
+      <div class="page-hero__meta-item"><span>Deadline</span><b>TBA</b></div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="reg-wrap">
+
+    <div class="form-progress" id="formProgress" aria-hidden="true">
+      <div class="form-progress__step done"></div>
+      <div class="form-progress__step"></div>
+      <div class="form-progress__step"></div>
+      <div class="form-progress__step"></div>
+    </div>
+
+    <form class="reg-form" id="recruitForm" novalidate>
+
+      <!-- SECTION 1 -->
+      <div class="reg-section">
+        <div class="reg-section__head">
+          <div class="reg-section__num">01</div>
+          <div>
+            <h3>Data Diri</h3>
+            <p>Info dasar tentang kamu</p>
+          </div>
+        </div>
+        <div class="reg-grid">
+          <div class="field-row field-row--full">
+            <label for="regNama">Nama Lengkap <span class="req">*</span></label>
+            <input type="text" id="regNama" name="nama" placeholder="Contoh: Bagas Wirayudha" required />
+            <p class="field-hint">Sesuai dengan nama yang terdaftar di sekolah.</p>
+          </div>
+          <div class="field-row">
+            <label>Kelas <span class="req">*</span></label>
+            <div class="radio-group">
+              <label class="radio-pill"><input type="radio" name="kelas" value="10" required /><span>Kelas 10</span></label>
+              <label class="radio-pill"><input type="radio" name="kelas" value="11" /><span>Kelas 11</span></label>
+            </div>
+          </div>
+          <div class="field-row">
+            <label for="regRombel">Rombel <span class="req">*</span></label>
+            <select id="regRombel" name="rombel" required>
+              <option value="">— Pilih rombel —</option>
+              <option value="A">A</option>
+              <option value="B">B</option>
+              <option value="C">C</option>
+              <option value="D">D</option>
+              <option value="E">E</option>
+              <option value="F">F</option>
+              <option value="G">G</option>
+            </select>
+          </div>
+          <div class="field-row">
+            <label for="regWa">No. WhatsApp <span class="req">*</span></label>
+            <input type="tel" id="regWa" name="wa" placeholder="08xx xxxx xxxx" required />
+          </div>
+          <div class="field-row">
+            <label for="regEmail">Email <span class="opt">Opsional</span></label>
+            <input type="email" id="regEmail" name="email" placeholder="nama@email.com" />
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 2 -->
+      <div class="reg-section">
+        <div class="reg-section__head">
+          <div class="reg-section__num">02</div>
+          <div>
+            <h3>Pilihan Divisi</h3>
+            <p>Pilih maksimal 2 divisi & jelaskan alasanmu</p>
+          </div>
+        </div>
+        <div class="div-pref">
+          <div class="div-pref__block">
+            <span class="div-pref__badge">Pilihan Utama</span>
+            <div class="reg-grid" style="margin-top:8px;">
+              <div class="field-row field-row--full">
+                <label for="regDiv1">Divisi Pilihan 1 <span class="req">*</span></label>
+                <select id="regDiv1" name="div1" required>
+                  <option value="">— Pilih divisi —</option>
+                  <option value="PDD">PDD — Publikasi, Dokumentasi & Desain</option>
+                  <option value="Acara">Acara — Event & Program</option>
+                  <option value="Humas">Humas — Hubungan Masyarakat</option>
+                  <option value="Dana Usaha">Dana Usaha — Funding & Sponsorship</option>
+                  <option value="Konsumsi">Konsumsi — Consumption & Logistics</option>
+                  <option value="Perlengkapan">Perlengkapan — Equipment & Venue</option>
+                </select>
+              </div>
+              <div class="field-row field-row--full">
+                <label for="regAlasan1">Alasan memilih divisi ini <span class="req">*</span></label>
+                <textarea id="regAlasan1" name="alasan1" placeholder="Ceritakan kenapa kamu tertarik di divisi ini. Minimal 50 karakter." required minlength="50"></textarea>
+                <div style="display:flex;justify-content:space-between;align-items:center;">
+                  <p class="field-hint">Semakin detail, semakin bagus.</p>
+                  <span class="char-count" data-for="regAlasan1" data-min="50">0/50</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="div-pref__block div-pref__block--opt">
+            <span class="div-pref__badge">Cadangan / Opsional</span>
+            <div class="reg-grid" style="margin-top:8px;">
+              <div class="field-row field-row--full">
+                <label for="regDiv2">Divisi Pilihan 2 <span class="opt">Opsional</span></label>
+                <select id="regDiv2" name="div2">
+                  <option value="">— Tidak ada / pilih divisi —</option>
+                  <option value="PDD">PDD — Publikasi, Dokumentasi & Desain</option>
+                  <option value="Acara">Acara — Event & Program</option>
+                  <option value="Humas">Humas — Hubungan Masyarakat</option>
+                  <option value="Dana Usaha">Dana Usaha — Funding & Sponsorship</option>
+                  <option value="Konsumsi">Konsumsi — Consumption & Logistics</option>
+                  <option value="Perlengkapan">Perlengkapan — Equipment & Venue</option>
+                </select>
+              </div>
+              <div class="field-row field-row--full" id="alasan2Wrap" style="display:none;">
+                <label for="regAlasan2">Alasan memilih divisi 2 <span class="req">*</span></label>
+                <textarea id="regAlasan2" name="alasan2" placeholder="Ceritakan kenapa kamu juga tertarik di divisi ini. Minimal 50 karakter." minlength="50"></textarea>
+                <div style="display:flex;justify-content:space-between;align-items:center;">
+                  <p class="field-hint">Diisi kalau kamu memilih divisi kedua.</p>
+                  <span class="char-count" data-for="regAlasan2" data-min="50">0/50</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pdd-portfolio" id="pddPortfolio">
+            <div class="pdd-portfolio__head">
+              <div class="pdd-portfolio__ico">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2.5" stroke="currentColor" stroke-width="1.8"/><circle cx="9" cy="11" r="2" stroke="currentColor" stroke-width="1.8"/><path d="M21 16l-5-5-8 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <h4>Portofolio PDD</h4>
+                <p>Kamu pilih <b>PDD</b> — lampirkan link portofolio/ karya kamu.</p>
+              </div>
+            </div>
+            <div class="field-row">
+              <label for="regPortfolio">Link Portofolio <span class="req">*</span></label>
+              <input type="url" id="regPortfolio" name="portfolio" placeholder="https://drive.google.com/... atau https://instagram.com/..." />
+              <p class="field-hint">Bisa: Google Drive, Instagram, Behance, Canva, GitHub, YouTube. Pastikan link <b>public</b>.</p>
+            </div>
+            <div class="field-row" style="margin-top:14px;">
+              <label for="regPortfolioDesc">Deskripsi Singkat Portofolio <span class="opt">Opsional</span></label>
+              <textarea id="regPortfolioDesc" name="portfolioDesc" placeholder="Ceritakan sedikit tentang karya yang kamu lampirkan." style="min-height:80px;"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 3 -->
+      <div class="reg-section">
+        <div class="reg-section__head">
+          <div class="reg-section__num">03</div>
+          <div>
+            <h3>Tentang Kamu</h3>
+            <p>Skill dan pengalamanmu</p>
+          </div>
+        </div>
+        <div class="reg-grid">
+          <div class="field-row field-row--full">
+            <label>Skill / Keterampilan <span class="req">*</span></label>
+            <div class="checkbox-grid">
+              <label class="checkbox-pill"><input type="checkbox" name="skill" value="Desain Grafis" /><span class="checkbox-pill__box"></span><span>Desain Grafis</span></label>
+              <label class="checkbox-pill"><input type="checkbox" name="skill" value="Fotografi" /><span class="checkbox-pill__box"></span><span>Fotografi</span></label>
+              <label class="checkbox-pill"><input type="checkbox" name="skill" value="Videografi" /><span class="checkbox-pill__box"></span><span>Videografi</span></label>
+              <label class="checkbox-pill"><input type="checkbox" name="skill" value="Editing Video" /><span class="checkbox-pill__box"></span><span>Editing Video</span></label>
+              <label class="checkbox-pill"><input type="checkbox" name="skill" value="Menulis" /><span class="checkbox-pill__box"></span><span>Menulis</span></label>
+              <label class="checkbox-pill"><input type="checkbox" name="skill" value="Public Speaking" /><span class="checkbox-pill__box"></span><span>Public Speaking</span></label>
+              <label class="checkbox-pill"><input type="checkbox" name="skill" value="Coding / Web" /><span class="checkbox-pill__box"></span><span>Coding / Web</span></label>
+              <label class="checkbox-pill"><input type="checkbox" name="skill" value="Event Planning" /><span class="checkbox-pill__box"></span><span>Event Planning</span></label>
+              <label class="checkbox-pill"><input type="checkbox" name="skill" value="Negosiasi / Marketing" /><span class="checkbox-pill__box"></span><span>Negosiasi</span></label>
+              <label class="checkbox-pill"><input type="checkbox" name="skill" value="Manajemen Waktu" /><span class="checkbox-pill__box"></span><span>Manajemen Waktu</span></label>
+              <label class="checkbox-pill"><input type="checkbox" name="skill" value="Leadership" /><span class="checkbox-pill__box"></span><span>Leadership</span></label>
+              <label class="checkbox-pill"><input type="checkbox" name="skill" value="Microsoft Office" /><span class="checkbox-pill__box"></span><span>Microsoft Office</span></label>
+            </div>
+            <p class="field-hint">Pilih minimal 1 skill.</p>
+          </div>
+          <div class="field-row field-row--full">
+            <label for="regPengalaman">Pengalaman Organisasi <span class="opt">Opsional</span></label>
+            <textarea id="regPengalaman" name="pengalaman" placeholder="Ketua kelas, OSIS, ekstrakurikuler, panitia acara, dsb."></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 4 -->
+      <div class="reg-section">
+        <div class="reg-section__head">
+          <div class="reg-section__num">04</div>
+          <div>
+            <h3>Pertanyaan Essay</h3>
+            <p>Jawab dengan jujur</p>
+          </div>
+        </div>
+        <div class="reg-grid">
+          <div class="field-row field-row--full">
+            <label for="regTentang">Apa yang kamu ketahui tentang G-Fest? <span class="req">*</span></label>
+            <textarea id="regTentang" name="tentang" placeholder="Ceritakan versi kamu — apa G-Fest itu, tujuannya apa, dan kenapa kamu tertarik. Minimal 100 karakter." required minlength="100"></textarea>
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <p class="field-hint">Semakin lengkap, semakin baik.</p>
+              <span class="char-count" data-for="regTentang" data-min="100">0/100</span>
+            </div>
+          </div>
+          <div class="field-row field-row--full">
+            <label for="regMotivasi">Kenapa kamu ingin bergabung? <span class="req">*</span></label>
+            <textarea id="regMotivasi" name="motivasi" placeholder="Apa motivasi kamu? Apa yang ingin kamu pelajari? Minimal 100 karakter." required minlength="100"></textarea>
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <p class="field-hint">Kami ingin tahu kamu lebih dalam.</p>
+              <span class="char-count" data-for="regMotivasi" data-min="100">0/100</span>
+            </div>
+          </div>
+          <div class="field-row field-row--full">
+            <label for="regHarapan">Harapan setelah bergabung <span class="opt">Opsional</span></label>
+            <textarea id="regHarapan" name="harapan" placeholder="Misal: ingin belajar kerja tim, ingin punya pengalaman organisasi."></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 5 -->
+      <div class="reg-section">
+        <div class="reg-section__head">
+          <div class="reg-section__num">05</div>
+          <div>
+            <h3>Komitmen & Persetujuan</h3>
+            <p>Baca dulu sebelum submit</p>
+          </div>
+        </div>
+        <div class="commit-box">
+          <div class="commit-box__head">
+            <div class="commit-box__ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div>
+              <h4>Komitmen Panitia G-Fest</h4>
+              <p>Dengan mendaftar, kamu berkomitmen untuk:</p>
+            </div>
+          </div>
+          <ul class="commit-list">
+            <li>Hadir di setiap rapat & sesi koordinasi divisi.</li>
+            <li>Menjalankan tanggung jawab divisi dengan sungguh-sungguh.</li>
+            <li>Menjaga komunikasi aktif dengan koordinator dan anggota tim.</li>
+            <li>Membantu kelancaran seluruh rangkaian acara G-Fest.</li>
+            <li>Menjaga nama baik diri, divisi, dan sekolah.</li>
+          </ul>
+          <div class="field-row" style="margin-bottom:14px;">
+            <label>Bersedia ikut rapat rutin? <span class="req">*</span></label>
+            <div class="radio-group">
+              <label class="radio-pill"><input type="radio" name="rapat" value="Ya, bersedia" required /><span>Ya, bersedia</span></label>
+              <label class="radio-pill"><input type="radio" name="rapat" value="Dengan catatan" /><span>Dengan catatan</span></label>
+            </div>
+          </div>
+          <label class="commit-check">
+            <input type="checkbox" id="regCommit" name="commit" required />
+            <span class="commit-check__box"></span>
+            <span class="commit-check__txt">
+              Saya sudah membaca dan menyetujui seluruh ketentuan di atas. Saya berkomitmen untuk menjalankan tanggung jawab saya sebagai panitia G-Fest 2027. <span class="req">*</span>
+            </span>
+          </label>
+        </div>
+      </div>
+
+      <div class="reg-actions">
+        <p class="reg-actions__info">
+          Data kamu disimpan sebagai prototype dan <b>tidak dikirim ke server manapun</b>.
+          Setelah submit, akan muncul link WhatsApp untuk info lanjutan.
+        </p>
+        <div class="reg-actions__btns">
+          <a href="index.html" class="btn btn--ghost btn--lg">Batal</a>
+          <button type="submit" class="btn btn--primary btn--lg">Kirim Pendaftaran →</button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+<footer class="page-footer">
+  <div class="container">
+    © 2027 <b>G-Fest · SMA Negeri 1 Batang</b> — Garuda Festival Education<br>
+    Prototype — data bersifat placeholder.
+  </div>
+</footer>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="modal__backdrop" data-close></div>
+  <div class="modal__panel">
+    <button class="modal__close" data-close aria-label="Tutup">✕</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<script>
+var WA_ADMIN_NUMBER = "6281234567890";
+var WA_ADMIN_NAME = "Panitia G-Fest 2027";
+var STORAGE_REG = "gfest27_registrations";
+
+var $ = function(sel, root){ return (root || document).querySelector(sel); };
+var $$ = function(sel, root){ return Array.prototype.slice.call((root || document).querySelectorAll(sel)); };
+function esc(s){ return String(s).replace(/[&<>"']/g, function(c){ return ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" })[c]; }); }
+
+/* Modal */
+var modal = $("#modal"), modalBody = $("#modalBody"), lastFocused = null;
+function openModal(html){
+  lastFocused = document.activeElement;
+  modalBody.innerHTML = html;
+  modal.classList.add("open");
+  modal.setAttribute("aria-hidden","false");
+  document.body.style.overflow = "hidden";
+}
+function closeModal(){
+  modal.classList.remove("open");
+  modal.setAttribute("aria-hidden","true");
+  document.body.style.overflow = "";
+  if (lastFocused) lastFocused.focus();
+}
+modal.addEventListener("click", function(e){ if (e.target.closest("[data-close]")) closeModal(); });
+document.addEventListener("keydown", function(e){ if (e.key === "Escape" && modal.classList.contains("open")) closeModal(); });
+
+/* Save */
+function saveRegistration(data){
+  try {
+    var list = JSON.parse(localStorage.getItem(STORAGE_REG) || "[]");
+    list.push(data);
+    localStorage.setItem(STORAGE_REG, JSON.stringify(list));
+  } catch (e) {}
+}
+
+/* Div2 conditional */
+(function(){
+  var div2 = $("#regDiv2"), wrap2 = $("#alasan2Wrap"), alasan2 = $("#regAlasan2");
+  div2.addEventListener("change", function(){
+    if (div2.value) { wrap2.style.display = "flex"; alasan2.setAttribute("required","required"); }
+    else { wrap2.style.display = "none"; alasan2.removeAttribute("required"); alasan2.value = ""; updateCharCount(alasan2); }
+  });
+})();
+
+/* PDD conditional */
+(function(){
+  var d1 = $("#regDiv1"), d2 = $("#regDiv2"), pdd = $("#pddPortfolio"), pf = $("#regPortfolio");
+  function checkPDD(){
+    var isPDD = d1.value === "PDD" || (d2 && d2.value === "PDD");
+    pdd.classList.toggle("show", isPDD);
+    if (isPDD) pf.setAttribute("required","required");
+    else pf.removeAttribute("required");
+  }
+  d1.addEventListener("change", checkPDD);
+  d2.addEventListener("change", checkPDD);
+  checkPDD();
+})();
+
+/* Char counter */
+function updateCharCount(el){
+  var wrap = document.querySelector('.char-count[data-for="'+el.id+'"]');
+  if (!wrap) return;
+  var min = parseInt(wrap.dataset.min, 10) || 0;
+  var len = el.value.length;
+  wrap.textContent = len + "/" + min;
+  wrap.className = "char-count " + (len === 0 ? "" : len >= min ? "ok" : "low");
+}
+$$("textarea").forEach(function(t){ updateCharCount(t); t.addEventListener("input", function(){ updateCharCount(t); }); });
+
+/* Progress */
+(function(){
+  var form = $("#recruitForm");
+  var steps = $$("#formProgress .form-progress__step");
+  form.addEventListener("input", function(){
+    var filled = 0;
+    if ($("#regNama").value.trim() && $("#regRombel").value && $("#regWa").value.trim()) filled++;
+    if ($("#regDiv1").value && $("#regAlasan1").value.length >= 50) filled++;
+    if ($$('input[name="skill"]:checked').length > 0 && $("#regTentang").value.length >= 100 && $("#regMotivasi").value.length >= 100) filled++;
+    if ($("#regCommit").checked && $$('input[name="rapat"]:checked').length > 0) filled++;
+    steps.forEach(function(s, i){ s.classList.toggle("done", i < filled); });
+  }, true);
+})();
+
+/* Submit */
+$("#recruitForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  var form = e.target;
+  var errors = [];
+  var nama = $("#regNama").value.trim();
+  var kelas = (form.querySelector('input[name="kelas"]:checked') || {}).value || "";
+  var rombel = $("#regRombel").value;
+  var wa = $("#regWa").value.trim();
+  var email = $("#regEmail").value.trim();
+  var div1 = $("#regDiv1").value;
+  var alasan1 = $("#regAlasan1").value.trim();
+  var div2 = $("#regDiv2").value;
+  var alasan2 = $("#regAlasan2").value.trim();
+  var portfolio = $("#regPortfolio").value.trim();
+  var portfolioDesc = $("#regPortfolioDesc").value.trim();
+  var skills = $$('input[name="skill"]:checked').map(function(c){ return c.value; });
+  var pengalaman = $("#regPengalaman").value.trim();
+  var tentang = $("#regTentang").value.trim();
+  var motivasi = $("#regMotivasi").value.trim();
+  var harapan = $("#regHarapan").value.trim();
+  var rapat = (form.querySelector('input[name="rapat"]:checked') || {}).value || "";
+  var commit = $("#regCommit").checked;
+
+  if (!nama) { errors.push("Nama lengkap wajib diisi."); $("#regNama").classList.add("invalid"); } else $("#regNama").classList.remove("invalid");
+  if (!kelas) { errors.push("Pilih kelas kamu."); }
+  if (!rombel) { errors.push("Pilih rombel kamu."); $("#regRombel").classList.add("invalid"); } else $("#regRombel").classList.remove("invalid");
+  if (!wa) { errors.push("No. WhatsApp wajib diisi."); $("#regWa").classList.add("invalid"); } else $("#regWa").classList.remove("invalid");
+  if (!div1) { errors.push("Pilih divisi pilihan 1."); $("#regDiv1").classList.add("invalid"); } else $("#regDiv1").classList.remove("invalid");
+  if (!alasan1 || alasan1.length < 50) { errors.push("Alasan divisi 1 minimal 50 karakter."); $("#regAlasan1").classList.add("invalid"); } else $("#regAlasan1").classList.remove("invalid");
+  if (div2) { if (!alasan2 || alasan2.length < 50) { errors.push("Alasan divisi 2 minimal 50 karakter."); $("#regAlasan2").classList.add("invalid"); } else $("#regAlasan2").classList.remove("invalid"); }
+  if (div1 === div2 && div1) { errors.push("Divisi pilihan 1 dan 2 tidak boleh sama."); }
+  var isPDD = div1 === "PDD" || div2 === "PDD";
+  if (isPDD && !portfolio) { errors.push("Link portofolio wajib diisi karena kamu memilih divisi PDD."); $("#regPortfolio").classList.add("invalid"); } else $("#regPortfolio").classList.remove("invalid");
+  if (skills.length === 0) { errors.push("Pilih minimal 1 skill."); }
+  if (!tentang || tentang.length < 100) { errors.push("Jawaban tentang G-Fest minimal 100 karakter."); $("#regTentang").classList.add("invalid"); } else $("#regTentang").classList.remove("invalid");
+  if (!motivasi || motivasi.length < 100) { errors.push("Jawaban motivasi minimal 100 karakter."); $("#regMotivasi").classList.add("invalid"); } else $("#regMotivasi").classList.remove("invalid");
+  if (!rapat) { errors.push("Pilih ketersediaan ikut rapat."); }
+  if (!commit) { errors.push("Kamu harus menyetujui komitmen panitia."); }
+
+  if (errors.length) {
+    var firstInvalid = form.querySelector(".invalid");
+    if (firstInvalid) firstInvalid.scrollIntoView({ behavior: "smooth", block: "center" });
+    alert("⚠️ Ada beberapa yang perlu diperbaiki:\n\n• " + errors.join("\n• "));
+    return;
+  }
+
+  var regData = {
+    id: "REG-" + Date.now(), nama: nama, kelas: kelas, rombel: rombel, wa: wa, email: email,
+    div1: div1, alasan1: alasan1, div2: div2, alasan2: alasan2,
+    portfolio: portfolio, portfolioDesc: portfolioDesc,
+    skills: skills, pengalaman: pengalaman,
+    tentang: tentang, motivasi: motivasi, harapan: harapan,
+    rapat: rapat, commit: commit, submittedAt: new Date().toISOString()
+  };
+  saveRegistration(regData);
+  showThankYou(regData);
+});
+
+function showThankYou(data){
+  var kelasStr = "Kelas " + data.kelas + "-" + data.rombel;
+  var divsStr = data.div1 + (data.div2 ? " & " + data.div2 : "");
+  var waMessage = encodeURIComponent(
+    "Halo " + WA_ADMIN_NAME + "! Saya *" + data.nama + "* (" + kelasStr + "), baru saja mendaftar sebagai panitia G-Fest 2027. "
+    + "Divisi pilihan: " + divsStr + ". ID pendaftaran: " + data.id + ". Mohon info lanjutannya ya, terima kasih!"
+  );
+  var waLink = "https://wa.me/" + WA_ADMIN_NUMBER + "?text=" + waMessage;
+
+  openModal(''
+    + '<div class="ty-modal">'
+    +   '<div class="ty-modal__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5L10 17.5L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>'
+    +   '<span class="ty-modal__kicker">Pendaftaran Terkirim</span>'
+    +   '<h3>Terima kasih, ' + esc(data.nama.split(" ")[0]) + '! 🎉</h3>'
+    +   '<p>Pendaftaran kamu sudah kami terima. Tim G-Fest 2027 akan meninjau berkas kamu dan menghubungi via WhatsApp untuk tahap selanjutnya.</p>'
+    +   '<div class="ty-summary">'
+    +     '<h4>Ringkasan Pendaftaran</h4>'
+    +     '<div class="ty-summary__row"><span>ID</span><b>' + esc(data.id) + '</b></div>'
+    +     '<div class="ty-summary__row"><span>Nama</span><b>' + esc(data.nama) + '</b></div>'
+    +     '<div class="ty-summary__row"><span>Kelas</span><b>' + esc(kelasStr) + '</b></div>'
+    +     '<div class="ty-summary__row"><span>Divisi Pilihan 1</span><b>' + esc(data.div1) + '</b></div>'
+    +     (data.div2 ? '<div class="ty-summary__row"><span>Divisi Pilihan 2</span><b>' + esc(data.div2) + '</b></div>' : '')
+    +     '<div class="ty-summary__row"><span>Total Skill</span><b>' + data.skills.length + ' skill dipilih</b></div>'
+    +   '</div>'
+    +   '<a href="' + waLink + '" class="ty-wa" target="_blank" rel="noopener">'
+    +     '<div class="ty-wa__ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M17.5 14.4c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.1c-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.5-.6.2-.2.2-.3.4-.6.1-.2.1-.4 0-.6-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.8 0 1.7 1.2 3.3 1.4 3.5.2.2 2.4 3.6 5.7 5 3.3 1.4 3.3.9 3.9.9.6 0 1.9-.8 2.1-1.5.3-.8.3-1.4.2-1.5-.1-.1-.3-.2-.6-.3z" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 4.9L2 22l5.3-1.3C8.6 21.5 10.3 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.5 0-3-.4-4.3-1.2l-.3-.2-3.1.8.8-3-.2-.3c-.8-1.3-1.2-2.8-1.2-4.3 0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8z" fill="currentColor"/></svg></div>'
+    +     '<div class="ty-wa__body">'
+    +       '<p class="ty-wa__label">Info Lanjutan · Wajib</p>'
+    +       '<p class="ty-wa__title">Chat Admin G-Fest</p>'
+    +       '<p class="ty-wa__sub">Klik untuk dapat info selanjutnya via WhatsApp</p>'
+    +     '</div>'
+    +     '<span class="ty-wa__arrow">→</span>'
+    +   '</a>'
+    +   '<div class="ty-steps">'
+    +     '<h4>Langkah Selanjutnya</h4>'
+    +     '<div class="ty-step"><span class="ty-step__num">1</span><span>Klik tombol WhatsApp untuk <b>join grup info lanjutan</b>.</span></div>'
+    +     '<div class="ty-step"><span class="ty-step__num">2</span><span>Simpan <b>ID Pendaftaran</b>: <b>' + esc(data.id) + '</b></span></div>'
+    +     '<div class="ty-step"><span class="ty-step__num">3</span><span>Tunggu pengumuman <b>jadwal wawancara / seleksi</b> berikutnya.</span></div>'
+    +     '<div class="ty-step"><span class="ty-step__num">4</span><span>Pantau sosial media & website G-Fest 2027.</span></div>'
+    +   '</div>'
+    +   '<button class="ty-close" onclick="closeModal()">Tutup</button>'
+    + '</div>'
+  );
+}
+</script>
+
+</body>
+</html>
